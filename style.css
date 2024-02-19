@@ -152,7 +152,7 @@
     border-radius: 50%;
     background-color: rebeccapurple;
     margin: 0 auto;
-    background-image: url('/assests/photo_2024-02-19_11-31-55.jpg');
+    background-image: url(assests/photo_2024-02-19_11-31-55.jpg);
     background-position: center;
     background-size: cover;
 }
