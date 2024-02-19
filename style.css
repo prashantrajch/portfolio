@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+  --primary-color: #df2935;
+  --secondary-color: #46237a;
+  --third-color: #087e8b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container{
+    padding: 0.625rem 1.25rem;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    animation: slideRight 1s;
+}
+
+.change{
+    color: var(--primary-color);
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li{
+    padding: 4px 0;
+}
+
+
+.navbar a{
+    display: block;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    animation: slideTop 1s;
+}
+
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.5s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+.home{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .left{
+    flex: 2;
+}
+
+.left h3{
+    font-size: 1.75rem;
+    animation: slideBottom 1s;
+}
+
+.left h1{
+    font-size: 3.5rem;
+    animation: slideRight 1s;
+}
+
+.home .right{
+    flex: 1;
+}
+
+.right .img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+    margin: 0 auto;
+    background-image: url('/assests/photo_2024-02-19_11-31-55.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+
+    .container{
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
