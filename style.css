@@ -12,12 +12,19 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
+/* utilites class start */
 .container {
   padding: 0.625rem 1.25rem;
 }
 
+.change {
+  color: var(--primary-color);
+}
+
+/* for header part start */
 .header {
   display: flex;
   justify-content: space-between;
@@ -76,10 +83,6 @@
   transform: rotate(45deg);
 }
 
-.change {
-  color: var(--primary-color);
-}
-
 .navbar {
   list-style: none;
   display: flex;
@@ -113,6 +116,10 @@
 .navbar a:hover::after {
   width: 100%;
 }
+
+/* header part end */
+
+/* home section start */
 
 .home {
   height: 100vh;
@@ -204,6 +211,9 @@
   color: var(--primary-color);
 }
 
+/* home section end */
+
+/* for animation part start */
 @keyframes slideTop {
   0% {
     transform: translateY(100%);
@@ -256,6 +266,10 @@
   }
 }
 
+/* animation part end */
+
+/* Responsive part start */
+
 @media only screen and (max-width: 768px) {
   html {
     font-size: 14px;
@@ -305,7 +319,7 @@
 
 @media only screen and (max-width: 568px) {
   html {
-    font-size: 10px;
+    font-size: 14px;
   }
   .home {
     flex-direction: column;
@@ -325,3 +339,4 @@
   }
 }
 
+/* Responsive part end */
