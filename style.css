@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
 }
 
 .container {
@@ -174,7 +175,7 @@
   font-size: 1.5rem;
   border: 2px solid var(--third-color);
   border-radius: 50%;
-  margin: 1.875em 0.938em 1.875em 0;
+  margin: 0.875em 0.938em 1.5em 0;
   color: var(--third-color);
   opacity: 0;
   animation: slideLeft 0.5s ease forwards;
@@ -308,6 +309,7 @@
   }
   .home {
     flex-direction: column;
+    align-items: flex-start;
     height: auto;
   }
   nav {
@@ -315,6 +317,11 @@
   }
   .right {
     margin-top: 25px;
+    align-self: center;
+  }
+  .right .img{
+    width: calc(90vw);
+    height: calc(90vw);
   }
 }
 
