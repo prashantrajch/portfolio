@@ -24,6 +24,26 @@
   color: var(--primary-color);
 }
 
+.title{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  gap: 3rem;
+  margin: 25px 0;
+}
+
+.col{
+  flex: 1;
+}
+
+.sub-title{
+text-align: center;
+color: #aaa;
+}
+
 /* for header part start */
 .header {
   display: flex;
@@ -68,7 +88,6 @@
 .menu span:nth-child(2) {
   transform-origin: 50% 50%;
 }
-
 
 .menu.active span {
   margin: -1px;
@@ -120,26 +139,14 @@
 /* header part end */
 
 /* home section start */
-
 .home {
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.right .img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-  margin: 0 auto;
-  background-image: url("assests/photo_2024-02-19_11-31-55.jpg");
-  background-position: center;
-  background-size: cover;
+  gap: 10px;
+  padding: 50px 0 30px 0;
 }
 
-.home .left {
-  flex: 2;
+.home > div {
+  flex: 1;
 }
 
 .left h3 {
@@ -149,24 +156,8 @@
 }
 
 .left h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   animation: slideRight 1s;
-}
-
-.home .right {
-  flex: 1;
-}
-
-.right .img {
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-  margin: 0 auto;
-  background-image: url(assests/photo_2024-02-19_11-31-55.jpg);
-  background-position: center;
-  background-size: cover;
-  border: 3px solid var(--third-color);
 }
 
 .icons {
@@ -205,13 +196,153 @@
   color: #fff;
   letter-spacing: 2px;
   transition: 0.5s;
+  cursor: pointer;
+  animation: zoom 1s ease;
+
 }
 .btn:hover {
   background-color: #fff;
   color: var(--primary-color);
 }
 
+.photo-container {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid var(--third-color);
+}
+
+.photo-container::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.photo-container .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  background-image: url(assests/photo_2024-02-19_11-31-55.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: zoom 1s ease;
+}
+
 /* home section end */
+
+/* about section start */
+.about-img{
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  border: 2mm ridge var(--third-color);
+  padding: 5px;
+}
+
+.about-img .img{
+  width: 100%;
+  height: 100%;
+  background-image: url(assests/photo_2024-02-21_00-20-58.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  animation: zoom 1s ease;
+}
+
+.about-content p{
+font-size: 1.2rem;
+line-height: 38px;
+}
+/* about section end */
+
+/* skill section start */
+.skill .col{
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px 10px;
+  opacity: 0;
+  animation: slideLeft 0.5s ease forwards;
+  animation-delay: calc(0.3s * var(--k));
+}
+
+.skill .article-container{
+  margin-top: 25px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.skill article{
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-around;
+}
+
+.skill .icon{
+  height: 2rem;
+}
+
+.skill p{
+  color: #bbb;
+}
+
+/* skill section end */
+
+/* project section start */
+.project .col{
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 20px 10px;
+}
+/* project section end */
+
+/* contact section start */
+.input-field input,.input-field textarea{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  font-size: 17px;
+  border: 2px solid var(--third-color);
+  border-radius: 5px;
+  outline: #087e8b;
+  resize: none;
+}
+
+.btn.submit{
+  background-color: var(--third-color);
+  border-color: var(--third-color);
+}
+.submit:hover{
+  background-color: transparent;
+  color: #000;
+}
+/* contact section end */
+
+/* footer section start */
+footer{
+  text-align: center;
+  padding: 30px;
+  background-color: var(--third-color);
+  color: #fff;
+}
+
+footer a{
+  color: #fff;
+}
+
+footer a:hover{
+  color: var(--secondary-color);
+}
+/* footer section end */
 
 /* for animation part start */
 @keyframes slideTop {
@@ -258,6 +389,19 @@
   }
 }
 
+@keyframes zoom {
+  0%{
+    transform: scale(0.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+/* animation part end */
+
+/* Responsive part start */
+
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -265,10 +409,6 @@
     margin: 0 auto;
   }
 }
-
-/* animation part end */
-
-/* Responsive part start */
 
 @media only screen and (max-width: 768px) {
   html {
@@ -310,10 +450,12 @@
     flex-direction: column;
     align-items: center;
   }
+  .photo-container {
+    width: auto;
+  }
 
-  .right .img {
-    width: 290px;
-    height: 290px;
+  .about-content p{
+    line-height: 32px;
   }
 }
 
@@ -321,22 +463,36 @@
   html {
     font-size: 14px;
   }
-  .home {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
   nav {
     width: 100%;
   }
-  .right {
+
+  .home {
+    flex-wrap: wrap;
+    padding: 0px 0 30px 0;
+  }
+  .home .left {
+    flex: 100%;
+  }
+
+  .home .right {
     margin-top: 25px;
-    align-self: center;
   }
-  .right .img{
-    width: calc(90vw);
-    height: calc(90vw);
+
+  .row{
+    flex-direction: column;
   }
+
+  .order{
+    order: 2;
+  }
+
+  .about-img{
+    width: auto;
+    height: 60vw;
+  }
+
+
 }
 
 /* Responsive part end */
