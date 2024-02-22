@@ -197,7 +197,7 @@ color: #aaa;
   letter-spacing: 2px;
   transition: 0.5s;
   cursor: pointer;
-  animation: zoom2 1s ease;
+  animation: zoom 1s ease;
 
 }
 .btn:hover {
@@ -232,7 +232,7 @@ color: #aaa;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: zoom 1s linear;
+  animation: zoom2 1s linear;
 }
 
 /* home section end */
@@ -254,7 +254,7 @@ color: #aaa;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
-  animation: zoom 1s ease;
+  animation: zoom2 1s linear;
 }
 
 .about-content p{
@@ -388,8 +388,16 @@ footer a:hover{
     transform: translateX(0);
   }
 }
-
 @keyframes zoom {
+  0%{
+    transform: scale(0.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom2 {
   0%{
     transform: scale(0);
     filter: blur(64px);
@@ -414,14 +422,6 @@ footer a:hover{
   }
 }
 
-@keyframes zoom2 {
-  0%{
-    transform: scale(0.2);
-  }
-  100%{
-    transform: scale(1);
-  }
-}
 
 /* animation part end */
 
