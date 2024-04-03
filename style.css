@@ -388,7 +388,8 @@
   color: #fff;
   opacity: 0.8;
 }
-.card .video:hover {
+
+.card .video-btn:hover {
   opacity: 1;
 }
 
