@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+/* this code is for all colors */
 :root {
   --primary-color: #df2935;
   --secondary-color: #46237a;
@@ -24,24 +25,24 @@
   color: var(--primary-color);
 }
 
-.title{
+.title {
   font-size: 3rem;
   text-align: center;
 }
 
-.row{
+.row {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   margin: 25px 0;
 }
 
-.col{
+.col {
   flex: 1;
 }
 
-.sub-title{
-text-align: center;
-color: #aaa;
+.sub-title {
+  text-align: center;
+  color: #aaa;
 }
 
 /* for header part start */
@@ -198,7 +199,6 @@ color: #aaa;
   transition: 0.5s;
   cursor: pointer;
   animation: zoom 1s ease;
-
 }
 .btn:hover {
   background-color: #fff;
@@ -226,9 +226,8 @@ color: #aaa;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rebeccapurple;
   border-radius: 50%;
-  background-image: url(assests/photo_2024-02-19_11-31-55.jpg);
+  background-image: url(assests/Image/photo_2024-02-19_11-31-55.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -238,7 +237,7 @@ color: #aaa;
 /* home section end */
 
 /* about section start */
-.about-img{
+.about-img {
   width: 350px;
   height: 400px;
   margin: 0 auto;
@@ -246,10 +245,10 @@ color: #aaa;
   padding: 5px;
 }
 
-.about-img .img{
+.about-img .img {
   width: 100%;
   height: 100%;
-  background-image: url(assests/photo_2024-02-21_00-20-58.jpg);
+  background-image: url(assests/Image/photo_2024-02-21_00-20-58.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -257,14 +256,14 @@ color: #aaa;
   animation: zoom2 1s linear;
 }
 
-.about-content p{
-font-size: 1.2rem;
-line-height: 38px;
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 38px;
 }
 /* about section end */
 
 /* skill section start */
-.skill .col{
+.skill .col {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px 10px;
@@ -273,7 +272,7 @@ line-height: 38px;
   animation-delay: calc(0.3s * var(--k));
 }
 
-.skill .article-container{
+.skill .article-container {
   margin-top: 25px;
   display: flex;
   gap: 1rem;
@@ -281,32 +280,175 @@ line-height: 38px;
   /* justify-content: space-around; */
 }
 
-.skill article{
+.skill article {
   display: flex;
   gap: 0.5rem;
   justify-content: space-around;
 }
 
-.skill .icon{
+.skill .icon {
   height: 2rem;
 }
 
-.skill p{
+.skill p {
   color: #bbb;
 }
 
 /* skill section end */
 
 /* project section start */
-.project .col{
-  border: 1px solid #ddd;
-  text-align: center;
-  padding: 20px 10px;
+.project .card {
+  border: 2px solid #ddd;
+  overflow: hidden;
+  border-radius: 5px;
+  align-self: baseline;
+}
+
+.card img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.card-body {
+  padding: 8px 10px;
+}
+
+.card-title a {
+  color: var(--third-color);
+}
+
+.card-title a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.card .time {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.card .description {
+  margin: 10px 0;
+  line-height: 20px;
+}
+.card .full-descrpiton {
+  display: none;
+}
+
+.card .full-descrpiton.active {
+  display: block;
+}
+
+.card .full-descrpiton li {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+.card .full-descrpiton li:hover {
+  background-color: #ccc;
+}
+
+.card .read-more {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.card .read-more:hover {
+  text-decoration: underline;
+}
+
+.card .btns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 12px 0 5px 0;
+}
+
+.card .card-btn {
+  font-size: 14px;
+  padding: 0.3em 0.75em;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.card .repo {
+  background: #312e2e;
+  opacity: 0.8;
+  color: #fff;
+}
+.card .repo:hover {
+  background-color: #000;
+  opacity: 1;
+}
+
+.card .video-btn {
+  background-color: #087e8b;
+  color: #fff;
+  opacity: 0.8;
+}
+.card .video:hover {
+  opacity: 1;
+}
+
+.card .live {
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+  color: #fff;
+}
+
+.card .live:hover {
+  opacity: 1;
 }
 /* project section end */
 
+/* video section start */
+.video-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+  display: none;
+  animation: zoom 1s linear;
+}
+
+.video-section.active{
+  display: block;
+}
+
+.video {
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-section .close {
+  position: absolute;
+  color: #fff;
+  font-size: 4vw;
+  cursor: pointer;
+  right: 20px;
+}
+.video-section .close:hover {
+  color: var(--primary-color);
+}
+.video video {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* video section end */
+
 /* contact section start */
-.input-field input,.input-field textarea{
+.input-field input,
+.input-field textarea {
   width: 100%;
   margin-bottom: 20px;
   padding: 10px 15px;
@@ -317,29 +459,29 @@ line-height: 38px;
   resize: none;
 }
 
-.btn.submit{
+.btn.submit {
   background-color: var(--third-color);
   border-color: var(--third-color);
 }
-.submit:hover{
+.submit:hover {
   background-color: transparent;
   color: #000;
 }
 /* contact section end */
 
 /* footer section start */
-footer{
+footer {
   text-align: center;
   padding: 30px;
   background-color: var(--third-color);
   color: #fff;
 }
 
-footer a{
+footer a {
   color: #fff;
 }
 
-footer a:hover{
+footer a:hover {
   color: var(--secondary-color);
 }
 /* footer section end */
@@ -389,39 +531,36 @@ footer a:hover{
   }
 }
 @keyframes zoom {
-  0%{
+  0% {
     transform: scale(0.2);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
 @keyframes zoom2 {
-  0%{
+  0% {
     transform: scale(0);
     filter: blur(64px);
   }
-  25%{
+  25% {
     transform: scale(0.25);
     filter: blur(32px);
   }
-  50%{
+  50% {
     transform: scale(0.5);
     filter: blur(16px);
-    
   }
-  75%{
+  75% {
     transform: scale(0.75);
     filter: blur(8px);
-    
   }
-  100%{
+  100% {
     filter: blur(0px);
     transform: scale(1);
   }
 }
-
 
 /* animation part end */
 
@@ -479,7 +618,7 @@ footer a:hover{
     width: auto;
   }
 
-  .about-content p{
+  .about-content p {
     line-height: 32px;
   }
 }
@@ -504,20 +643,18 @@ footer a:hover{
     margin-top: 25px;
   }
 
-  .row{
+  .row {
     flex-direction: column;
   }
 
-  .order{
+  .order {
     order: 2;
   }
 
-  .about-img{
+  .about-img {
     width: auto;
     height: 60vw;
   }
-
-
 }
 
 /* Responsive part end */
