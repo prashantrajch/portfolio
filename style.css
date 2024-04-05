@@ -298,12 +298,12 @@
 
 /* project section start */
 .project .row {
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 
 .project .card {
-  max-width: calc(100% / 3 - 2rem);
-  min-width: 300px;
+  max-width: calc(100% / 3 - 2rem) !important;
+  min-width: 300px !important;
   border: 2px solid #ddd;
   overflow: hidden;
   border-radius: 5px;
