@@ -70,6 +70,9 @@ let videSrc = [
   {
     imgLocation: "assests/Video/Todo Video.mp4",
   },
+  {
+    imgLocation: "assests/Video/Currency Converter App.mp4",
+  },
 ];
 
 videoBtn.forEach((btn,ind) => {

@@ -297,7 +297,13 @@
 /* skill section end */
 
 /* project section start */
+.project .row {
+  flex-wrap: wrap;
+}
+
 .project .card {
+  max-width: calc(100% / 3 - 2rem);
+  min-width: 300px;
   border: 2px solid #ddd;
   overflow: hidden;
   border-radius: 5px;
@@ -412,13 +418,13 @@
   left: 0;
   right: 0;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 99;
   display: none;
   animation: zoom 1s linear;
 }
 
-.video-section.active{
+.video-section.active {
   display: block;
 }
 
