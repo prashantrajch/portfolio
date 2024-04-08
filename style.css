@@ -38,11 +38,11 @@
 }
 
 .col {
-  min-width: 300px;
+  min-width: 250px;
   width: calc(100%/3 - 2rem);
 }
 
-.about .col{
+.about .col,.contact .col{
   width: calc(100%/2 - 1rem);
 }
 
@@ -303,9 +303,6 @@
 /* skill section end */
 
 /* project section start */
-.project .row{
-  /* flex-wrap: wrap; */
-}
 
 .project .card {
   border: 2px solid #ddd;
@@ -633,6 +630,10 @@ footer a:hover {
   .about-content p {
     line-height: 32px;
   }
+
+  .col{
+    min-width: calc(100%/2 - 2rem);
+  }
 }
 
 @media only screen and (max-width: 568px) {
@@ -655,11 +656,7 @@ footer a:hover {
     margin-top: 25px;
   }
 
-  .col{
-    width: 100%;
-  }
-
-  .about .col{
+  .col,.about .col, .contact .col{
     width: 100%;
   }
 
