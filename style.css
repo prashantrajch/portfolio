@@ -32,12 +32,18 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 25px 0;
 }
 
 .col {
-  flex: 1;
+  min-width: 300px;
+  width: calc(100%/3 - 2rem);
+}
+
+.about .col{
+  width: calc(100%/2 - 1rem);
 }
 
 .sub-title {
@@ -297,13 +303,11 @@
 /* skill section end */
 
 /* project section start */
-.project .row {
-  flex-wrap: wrap !important;
+.project .row{
+  /* flex-wrap: wrap; */
 }
 
 .project .card {
-  max-width: calc(100% / 3 - 2rem) !important;
-  min-width: 300px !important;
   border: 2px solid #ddd;
   overflow: hidden;
   border-radius: 5px;
@@ -651,8 +655,12 @@ footer a:hover {
     margin-top: 25px;
   }
 
-  .row {
-    flex-direction: column;
+  .col{
+    width: 100%;
+  }
+
+  .about .col{
+    width: 100%;
   }
 
   .order {
