@@ -73,6 +73,9 @@ let videSrc = [
   {
     imgLocation: "assests/Video/Currency Converter App.mp4",
   },
+  {
+    imgLocation: 'assests/Video/Shopping Cart Videos.mp4'
+  }
 ];
 
 videoBtn.forEach((btn,ind) => {
@@ -82,7 +85,7 @@ videoBtn.forEach((btn,ind) => {
     video.addEventListener('canplay',function() {
       setTimeout(function(){
         video.play();
-      },2000)
+      },1500)
     })
   })
 })
